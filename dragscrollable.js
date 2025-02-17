@@ -1,9 +1,10 @@
 /*
  * jQuery dragscrollable Plugin
- * version: 1.2 (09-Feb-2020)
+ * version: 1.3 (17-Feb-2025)
  * Copyright (c) 2009 Miquel Herrera
  * Modified 2016 by Alexander Steinhöfer
  * Modified 2020 by Bilal Bagdad
+ * Modified 2025 by Josh Mckibbin
  *
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -148,8 +149,8 @@ $.fn.dragscrollable = function( options ){
       which: settings.which
     };
     // Set mouse initiating event on the desired descendant
-    $(this).find(settings.dragSelector).bind('mousedown',  data, dragscroll.mouseDownHandler);
-    $(this).find(settings.dragSelector).bind('touchstart', data, dragscroll.touchStartHandler);
+    $(this).find(settings.dragSelector).on('mousedown',  data, dragscroll.mouseDownHandler);
+    $(this).find(settings.dragSelector).on('touchstart', data, dragscroll.touchStartHandler);
   });
 }; //end plugin dragscrollable
 
